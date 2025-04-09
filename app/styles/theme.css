@@ -1,0 +1,159 @@
+/* ======= Root Variable (Light Mode Default) ======= */
+:root {
+  --bg-color: #f0f6ff;           /* biru sangat terang seperti langit */
+  --text-color: #1e2a38;         /* biru keabu-abuan gelap */
+  --navbar-bg: #e3f0ff;          /* biru pastel terang */
+  --navbar-text: #1e2a38;
+  --shadow-color: rgba(30, 42, 56, 0.08);
+  --border-color: #c5d8ea;
+  --accent-color: #86bdff;       /* biru langit lembut */
+  --hover-bg: #d4e8ff;           /* hover soft blue */
+  --menu-bg: #f7fbff;            /* putih kebiruan */
+}
+[data-theme="dark"] {
+  --bg-color: #1c1f26;              /* abu gelap dengan sedikit nuansa biru tua */
+  --text-color: #e4eaf0;            /* putih kebiruan yang lembut */
+  --navbar-bg: #232730;             /* sedikit lebih terang dari bg, tetap gelap */
+  --navbar-text: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-color: #3a3f4b;          /* abu-abu medium */
+  --accent-color: #256192;          /* biru muda cerah */
+  --hover-bg: #2a2f3b;              /* efek hover sedikit lebih terang */
+  --menu-bg: #252932;               /* mirip navbar, tapi tanpa dominasi */
+}
+  /* ======= Global Styles ======= */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* ======= Navbar Styles ======= */
+  .navbar {
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-menu li a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* ======= Theme Toggle ======= */
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .theme-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ======= Responsive Styles ======= */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  /* Desktop menu visible by default */
+  .desktop-menu {
+    display: flex;
+  }
+  
+  /* Mobile menu hidden by default */
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--menu-bg);
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+  }
+  
+  /* Active mobile menu */
+  .mobile-menu.active {
+    display: flex;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* ======= Footer Styles ======= */
+.footer {
+    background-color: var(--navbar-bg);
+    color: var(--text-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  

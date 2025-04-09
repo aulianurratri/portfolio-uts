@@ -1,0 +1,99 @@
+.anbeauty-wrapper {
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background: linear-gradient(to bottom right, var(--menu-bg), var(--bg-color));
+    transition: background 0.3s ease;
+    padding-bottom: 7rem;
+  }
+  
+  .anbeauty-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    background-color: var(--menu-bg);
+    box-shadow: 0 20px 50px var(--shadow-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .anbeauty-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  .anbeauty-desc {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    line-height: 1.8;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+  }
+  
+  .anbeauty-desc strong {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+  }
+  
+  .anbeauty-img {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 10px 20px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .anbeauty-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px var(--shadow-color);
+  }
+  
+  .anbeauty-button-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .anbeauty-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .anbeauty-button:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  /* ========== RESPONSIVE (Mobile < 640px) ========== */
+  @media (max-width: 640px) {
+    .anbeauty-container {
+      padding: 1.5rem;
+    }
+  
+    .anbeauty-title {
+      font-size: 1.75rem;
+    }
+  
+    .anbeauty-desc {
+      font-size: 1rem;
+    }
+  
+    .anbeauty-button {
+      padding: 0.6rem 1.25rem;
+      font-size: 0.95rem;
+    }
+  }
+  
